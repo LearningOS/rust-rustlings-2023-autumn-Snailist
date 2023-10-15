@@ -55,8 +55,6 @@ impl State {
             Message::Move(point) => self.move_position(point),
             Message::Quit => self.quit(),
         };
-
-        // self.process(Message::ChangeColor((255, 0, 255)));
     }
 }
 
