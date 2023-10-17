@@ -52,7 +52,7 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
         //     goals_scored: 0,
         //     goals_conceded: 0,
         // });
-        // (*score).goals_scored += team_2_score;
+        // (*score).goals_scored += team_2_score ;
         // (*score).goals_scored += team_1_score;
     }
     scores
