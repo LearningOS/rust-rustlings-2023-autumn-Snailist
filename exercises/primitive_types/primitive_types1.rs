@@ -6,11 +6,12 @@
 // Execute `rustlings hint primitive_types1` or use the `hint` watch subcommand
 // for a hint.
 
+// I AM DONE
+
 fn main() {
     // Booleans (`bool`)
 
     let is_morning = true;
-
     if is_morning {
         println!("Good morning!");
     }

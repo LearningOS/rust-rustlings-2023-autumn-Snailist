@@ -8,9 +8,10 @@
 // Execute `rustlings hint modules3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DO NE
+// I AM DONE
 
-// TODO: Complete this use statement
+// Complete this use statement
+
 use std::time::{SystemTime, UNIX_EPOCH};
 
 fn main() {

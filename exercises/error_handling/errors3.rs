@@ -7,7 +7,7 @@
 // Execute `rustlings hint errors3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DO NE
+// I AM DONE
 
 use std::num::ParseIntError;
 

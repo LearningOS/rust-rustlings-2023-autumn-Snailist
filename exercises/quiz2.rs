@@ -20,7 +20,7 @@
 //
 // No hints this time!
 
-// I AM NOT DO NE
+// I AM DONE
 
 pub enum Command {
     Uppercase,
@@ -30,19 +30,20 @@ pub enum Command {
 
 mod my_module {
     use super::Command;
+    use Command::*;
 
-    // TODO: Complete the function signature!
+    // Complete the function signature!
     pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
-        // TODO: Complete the output declaration!
-        let mut output: Vec<String> = Vec::with_capacity(input.len());
+        // Complete the output declaration!
+        let mut output: Vec<String> = vec![];
         for (string, command) in input.iter() {
-            // TODO: Complete the function body. You can do it!
-            let applied_string = match command {
-                Command::Uppercase => string.to_uppercase(),
-                Command::Trim => string.trim().to_string(),
-                Command::Append(num) => format!("{}{}", string, "bar".repeat(*num)),
+            // Complete the function body. You can do it!
+            let r = match command {
+                Uppercase => string.to_ascii_uppercase(),
+                Trim => string.trim().to_owned(),
+                Append(usize) => string.to_owned() + &"bar".repeat(*usize),
             };
-            output.push(applied_string);
+            output.push(r);
         }
         output
     }
@@ -50,7 +51,7 @@ mod my_module {
 
 #[cfg(test)]
 mod tests {
-    // TODO: What do we need to import to have `transformer` in scope?
+    // TODO: What do we have to import to have `transformer` in scope?
     use super::my_module::transformer;
     use super::Command;
 

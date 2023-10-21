@@ -10,7 +10,7 @@
 // Execute `rustlings hint tests1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DO NE
+// I AM DONE
 
 #[cfg(test)]
 mod tests {

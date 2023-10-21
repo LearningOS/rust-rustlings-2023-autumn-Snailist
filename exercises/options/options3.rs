@@ -3,9 +3,8 @@
 // Execute `rustlings hint options3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT D ONE
+// I AM DONE
 
-// #[derive(Clone)]
 struct Point {
     x: i32,
     y: i32,
@@ -15,8 +14,8 @@ fn main() {
     let y: Option<Point> = Some(Point { x: 100, y: 200 });
 
     match y {
-        Some(ref p) => println!("Co-ordinates are {},{} ", p.x, p.y),
-        _ => panic!("no match!"),
+        Some(ref p) => println!("Co-ordinates are {},{} ", p.x, p.y), // `ref`: Bind by reference during pattern matching.
+        _ => println!("no match"),
     }
     y; // Fix without deleting this line.
 }

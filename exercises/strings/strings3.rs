@@ -3,20 +3,20 @@
 // Execute `rustlings hint strings3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DO NE
+// I AM DONE
 
 fn trim_me(input: &str) -> String {
-    // TODO: Remove whitespace from both ends of a string!
-    input.trim().to_string()
+    // Remove whitespace from both ends of a string!
+    input.trim().to_owned() // `to_string()` may be also correct
 }
 
 fn compose_me(input: &str) -> String {
-    // TODO: Add " world!" to the string! There's multiple ways to do this!
-    format!("{} world!", input)
+    // Add " world!" to the string! There's multiple ways to do this!
+    input.to_owned() + " world!"
 }
 
 fn replace_me(input: &str) -> String {
-    // TODO: Replace "cars" in the string with "balloons"!
+    // Replace "cars" in the string with "balloons"!
     input.replace("cars", "balloons")
 }
 
@@ -39,13 +39,7 @@ mod tests {
 
     #[test]
     fn replace_a_string() {
-        assert_eq!(
-            replace_me("I think cars are cool"),
-            "I think balloons are cool"
-        );
-        assert_eq!(
-            replace_me("I love to look at cars"),
-            "I love to look at balloons"
-        );
+        assert_eq!(replace_me("I think cars are cool"), "I think balloons are cool");
+        assert_eq!(replace_me("I love to look at cars"), "I love to look at balloons");
     }
 }

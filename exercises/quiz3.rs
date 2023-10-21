@@ -16,7 +16,9 @@
 //
 // Execute `rustlings hint quiz3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DO NE
+// I AM DONE
+
+use std::fmt::Display;
 
 pub struct ReportCard<T> {
     pub grade: T,
@@ -24,12 +26,10 @@ pub struct ReportCard<T> {
     pub student_age: u8,
 }
 
-impl<T: std::fmt::Display> ReportCard<T> {
+impl<T: Display> ReportCard<T> {    // impl with trait bound
     pub fn print(&self) -> String {
-        format!(
-            "{} ({}) - achieved a grade of {}",
-            &self.student_name, &self.student_age, &self.grade
-        )
+        format!("{} ({}) - achieved a grade of {}",
+            &self.student_name, &self.student_age, &self.grade)
     }
 }
 
@@ -54,7 +54,7 @@ mod tests {
     fn generate_alphabetic_report_card() {
         // TODO: Make sure to change the grade here after you finish the exercise.
         let report_card = ReportCard {
-            grade: "A+".to_string(),
+            grade: String::from("A+"),
             student_name: "Gary Plotter".to_string(),
             student_age: 11,
         };
